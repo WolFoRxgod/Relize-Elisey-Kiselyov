@@ -4,8 +4,7 @@ body{
     font-family: "Raleway", sans-serif;
 }
 header{
-    background-image: linear-gradient(90deg, rgb(235, 201, 114) 0%, rgb(235, 201, 114) 5%,rgb(232, 188, 112) 5%, rgb(232, 188, 112) 18%,rgb(230, 174, 109) 18%, rgb(230, 174, 109) 38%,rgb(227, 161, 107) 38%, rgb(227, 161, 107) 53%,rgb(224, 147, 104) 53%, rgb(224, 147, 104) 71%,rgb(222, 134, 102) 71%, rgb(222, 134, 102) 81%,rgb(219, 120, 99) 81%, rgb(219, 120, 99) 100%);
-
+   background-color: #FE6D1E;
 }
 
 
@@ -163,10 +162,20 @@ header.fixed {
     margin-bottom: 50px;
 }
 .card{
-    width: 400px;
+    width: 300px;
+    background-color: #64805A;
+    margin-bottom: 30px;
 }
 
+.card:hover{
+    background-color: #FE6D1E;
+    transition: 0.6s;
+}
 .card img{
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
+}
+
+main{
+    background-color: #313131;
 }

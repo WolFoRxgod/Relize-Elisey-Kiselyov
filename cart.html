@@ -12,70 +12,42 @@
 </head>
 <body>
   <header class="container fixed">
-    <nav class="navbar navbar-expand-lg ">
-      <div class="container">
-        <a class="navbar-brand" href="index.html"><img class='logo' src='img/logo.png' height="50px" alt='logo'></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class='nav-link own-link-class' href='index.html#products'>Каталог</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href='index.html#about'>Про нас</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href='#support' class="btn btn-primary" data-bs-toggle="modal"
-                data-bs-target="#exampleModal">Підтримка</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link" href='index.html#recall'>Відгуки</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link" href='#contacts'>Контакти</a>
-            </li>
-          </ul>
-          <form id="searchForm" class="d-flex mx-auto" role="search">
-            <input class="form-control me-2" type="search" placeholder="Пошук" aria-label="Search">
-            <button class="btn btn-outline-secondary btn-search btn-search-own-class" type="submit">Знайти</button>
-          </form>
-          <button class="cart-btn" id="cartBtn">
-            Кошик
-            <svg xmlns="http://www.w3.org/2000/svg" class="bell" width="24" height="24" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-              class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-cart">
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
-              <path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
-              <path d="M17 17h-11v-14h-2" />
-              <path d="M6 5l14 1l-1 7h-13" />
-            </svg>
-            <span class="cart-counter">0</span>
-            </li>
-          </button>
-
-          <button class="registration-icon">Log in</button>
-        </div>
+    <nav class="navbar navbar-expand-lg"  data-bs-theme="dark">
+      
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <!-- Відредагуйте під ваші пункти меню -->
+  
+  
+                  <li class="nav-item" >
+                      <a class="nav-link" aria-current="page" href="index.html">HOME  
+                      </a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">PORTFOLIO</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">CONTACTS</a>
+                </li>
+              </ul>
+  
+  
+              <button class="cart-btn" id="cartBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" class="bell" width="16" height="16" fill="currentColor" class="bi bi-bag-heart-fill" viewBox="0 0 16 16">
+                  <path d="M11.5 4v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m0 6.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132"/>
+                </svg>
+                      <path
+                          d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4 4 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4 4 0 0 0-3.203-3.92zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5 5 0 0 1 13 6c0 .88.32 4.2 1.22 6" />
+                  </svg>
+                  Замовити
+              </button>
+          </div>
       </div>
-    </nav>
+  </nav>
   </header>
   <main class="container cart-page">
 
-    <section class="cart py-4">
-      <h2>Ваш кошик</h2>
-      <div class="cart-items-list">
-        У кошику ще немає товарів
-      </div>
-      <div class="margin-y">
-        Сума замовлення: <span class="cart-total">0</span> грн.
-      </div>
-      <button  id="orderBtn" class="cart-btn margin-y">Оформити замовлення</button>
-    </section>
-    <section class="order">
+    <section>
       <h2>Оформлення замовлення</h2>
       <form class="order-form" action="" method="post">
         <div class="form-group mt-3">
@@ -115,54 +87,13 @@
           <label for="comment">Коментар:</label>
           <textarea class="form-control" id="comment" name="comment" rows="4"></textarea>
         </div>
-        <button  type="submit" class="cart-btn margin-y">Підтвердити</button>
+        <button  type="submit" class="cart-btn cart-btn-1 margin-y">Підтвердити</button>
   
       </form>
     </section>
 
   </main>
-  <footer>
-    <button id="themeToggle"><i class="bi bi-brightness-high"></i></button>
-    <div class="phone">
-      <p class="phone-number"> Номер телефону</p>
-      <p class="phone-number">+380 95 342 49 37</p>
-    </div>
-    <div class="footer-info">
-      <p>Соц. мережі</p>
-      <div class="image-left">
-        <img src="https://github.com/VikaKhaustova/Polous_Maxim/blob/main/folder/10.png?raw=true" />
-      </div>
-      <div class="image-right">
-        <img src="https://github.com/VikaKhaustova/Polous_Maxim/blob/main/folder/11.png?raw=true" />
-      </div>
-    </div>
-
-    
-  </footer>
   
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-theme="light">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5 text-dark" id="exampleModalLabel">Виникли запитання?</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <p class="text-dark">Будь ласка, залиште номер телефону і ми зв'яжемося з Вами.</p>
-          <form action="" method="post">
-            <div class="mb-3">
-              <input type="text" class="form-control" name="" id="" aria-describedby="helpId"
-                placeholder="Номер телефону" />
-            </div>
-
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn cart-btn">Надіслати</button>
-        </div>
-      </div>
-    </div>
-  </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
   integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <script src='https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js'></script>
